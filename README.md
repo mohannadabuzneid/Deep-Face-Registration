@@ -45,6 +45,13 @@ Figure 3. The 6 facial landmarks associated with the eye.
 To find the transformation parameters for an image, we passed the 12 points of the reference image and the 12 points of the target image to the minimized cost function method which we described below. Minimized cost function will return the transformation parameters (Rotation, Scaling shifting). We obtained our training dataset by applying the same method on all images.
 
 
+#### Minimized Cost Function
+
+Matrix equation (1) is used to minimize the cost of the image registration (without shear) when the related points in two images X and Y are identified. Summation indicates the sum over all points in an image.  We used in our implementation the sigmoidal function as the neuron activation functions.
+
+![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/eq1.png) Eq1
+
+
 ```python
 import face_recognition
 image = face_recognition.load_image_file("your_file.jpg")
