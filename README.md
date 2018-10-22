@@ -5,7 +5,7 @@ Based on our survey, we could not find a dataset used for face registration prob
 In this research, we built the system using [Tensorflow](https://www.tensorflow.org/guide/keras) using deep learning. The model has an accuracy of 98.55% on the [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/) benchmark.
 
 
-## Obtaing the Dataset based on the LFW
+## A) Obtaing the Dataset based on the LFW
 
    LFW data set contains more than 13,000 images of faces collected from the web. Each face has been labeled with the name of the person pictured. 1680 of the people pictured have two or more distinct photos in the data set. The only constraint on these faces is that they were detected by the Viola-Jones face detector. The images are in color scale, and the size is 250x250 pixels with variant expressions, timing, pose, and gender.. Figure 1 shows a sample of the LFW dataset.
 
@@ -62,8 +62,11 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
        
 ### The Data will be saved in two numpy files. One contains the input images [Input data]() and the second file contains the image name and the 4 output values [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip). 
 
-   [Input data]()
-   [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip)
+
+## B) Deep Face Registration System:
+
+- We used the [Colab](http;//colab.research.google.com) system form google to tain our network. 
+- We uploaded our code and the [Input data]() and the [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip) files to the google drive. 
 
 ```python
 import face_recognition
