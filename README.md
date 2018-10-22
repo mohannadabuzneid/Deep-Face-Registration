@@ -40,6 +40,11 @@ We applied the haar-cascade face detection algorithm on the reference image to f
 
 Figure 3. The 6 facial landmarks associated with the eye.
 
+###### next: 
+
+To find the transformation parameters for an image, we passed the 12 points of the reference image and the 12 points of the target image to the minimized cost function method which we described below. Minimized cost function will return the transformation parameters (Rotation, Scaling shifting). We obtained our training dataset by applying the same method on all images.
+
+
 ```python
 import face_recognition
 image = face_recognition.load_image_file("your_file.jpg")
