@@ -31,10 +31,14 @@ We selected one of the LFW images as a reference image for all other images in t
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/Refrenace%20Image.png)
 
    Figure 2. Refrenace Image.
+   
+ ###### next: 
 
-Find all the faces that appear in a picture:
+We applied the haar-cascade face detection algorithm on the reference image to find the face boundary. Then, we detected the 6 facial landmarks associated with each eye based on the haar-cascade algorithm as it is shown in Figure 3.  In addition to the reference image, we apply the same method to all images in the dataset. Each eye is represented by 6 (x, y)-coordinates, starting at the left-corner of the eye (as if you were looking at the person), and then working clockwise around the remainder of the region. The total of points we will use to calculate the transformation parameter is 12 points, and we will eliminate any image has less than that from the training dataset.
 
+![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/The%206%20facial%20landmarks%20associated%20with%20the%20eye.jpg)
 
+Figure 3. The 6 facial landmarks associated with the eye.
 
 ```python
 import face_recognition
