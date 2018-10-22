@@ -58,7 +58,12 @@ To find the optimal transformation that will align image 2 to image 1, take the 
 
 After calculating the sum over all points for the 4x4 matrix and the right-hand 4x1 vector in equation (2), we can compute the required transformation by: 
        Matrix Ainv = A.Inverse and  Matrix Res = Ainv * B.
+       
+       
+### The Data will be saved in two numpy files. One contains the input images and the second file contains the image name and the 4 output values. 
 
+   Input data : ![]()
+   Output data: ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip)
 
 ```python
 import face_recognition
