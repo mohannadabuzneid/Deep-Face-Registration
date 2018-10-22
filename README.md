@@ -1,10 +1,8 @@
 # Deep Face Registration
 
-In this research, we built a system to register the human face images using a deep learning methods.
+Based on our survey, we could not find a dataset used for face registration problem. Therefore, we had to build our face registration dataset based on one of the existing state-of-the-art datasets. We decided to go with [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/) dataset.
 
-Built using [Tensorflow](https://www.tensorflow.org/guide/keras)'s state-of-the-art face registration
-built with deep learning. The model has an accuracy of 98.55% on the
-[Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/) benchmark.
+In this research, we built the system using [Tensorflow](https://www.tensorflow.org/guide/keras) using deep learning. The model has an accuracy of 98.55% on the [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/) benchmark.
 
 
 ## Obtaing the Dataset based on the LFW
