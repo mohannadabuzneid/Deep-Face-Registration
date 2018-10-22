@@ -69,9 +69,7 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
 - We uploaded our code and the [Input data]() and the [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip) files to the google drive. 
 
 
-# import the necessary packages:
-
-
+### import the necessary packages:
 
 ```python
 from __future__ import print_function
@@ -104,6 +102,12 @@ import keras.backend as K
 K.set_image_data_format('channels_last')
 K.set_learning_phase(1)
 import tensorflow as tf
+```
+
+### Mount the Google Drive:
+```
+from google.colab import drive
+drive.mount('/content/gdrive')
 ```
 
 #### Find and manipulate facial features in pictures
