@@ -11,7 +11,7 @@ In this research, we built the system using [Tensorflow](https://www.tensorflow.
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/LFW.png)
    
-   ####### Figure 1 Sample images of LFW dataset.
+   ###### Figure 1 Sample images of LFW dataset.
    
 -All images resized to 224x224.
 
@@ -30,7 +30,7 @@ We selected one of the LFW images as a reference image for all other images in t
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/Refrenace%20Image.png)
 
-   ####### Figure 2. Refrenace Image.
+   ###### Figure 2. Refrenace Image.
    
  ###### next: 
 
@@ -38,7 +38,7 @@ We applied the haar-cascade face detection algorithm on the reference image to f
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/The%206%20facial%20landmarks%20associated%20with%20the%20eye.jpg)
 
-####### Figure 3. The 6 facial landmarks associated with the eye.
+###### Figure 3. The 6 facial landmarks associated with the eye.
 
 ###### next: 
 
