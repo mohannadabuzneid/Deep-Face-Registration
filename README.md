@@ -68,10 +68,42 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
 - We used the [Google Colab system](https://colab.research.google.com) to tain our network. 
 - We uploaded our code and the [Input data]() and the [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip) files to the google drive. 
 
+
+# import the necessary packages:
+
+
+
 ```python
-import face_recognition
-image = face_recognition.load_image_file("your_file.jpg")
-face_locations = face_recognition.face_locations(image)
+from __future__ import print_function
+import os.path  
+import glob
+import os
+import numpy as np
+from matplotlib import pyplot as plt 
+import math
+import argparse
+import cv2
+import random
+from keras.optimizers import SGD
+from sklearn.model_selection import train_test_split
+from keras import layers
+from keras.layers import Input, Add, Dense, Activation, ZeroPadding2D, BatchNormalization, Flatten, Conv2D, AveragePooling2D, MaxPooling2D, GlobalMaxPooling2D
+from keras.models import Model, load_model
+from keras.preprocessing import image
+from keras.utils import layer_utils
+from keras.utils.data_utils import get_file
+from keras.applications.imagenet_utils import preprocess_input
+from IPython.display import SVG
+from keras.utils.vis_utils import model_to_dot
+from keras.utils import plot_model
+from keras.initializers import glorot_uniform
+import scipy.misc
+from matplotlib.pyplot import imshow
+%matplotlib inline
+import keras.backend as K
+K.set_image_data_format('channels_last')
+K.set_learning_phase(1)
+import tensorflow as tf
 ```
 
 #### Find and manipulate facial features in pictures
