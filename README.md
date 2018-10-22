@@ -62,8 +62,12 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
        
 ### The Data will be saved in two numpy files. One contains the input images and the second file contains the image name and the 4 output values. 
 
-   Input data : ![]()
-   Output data: ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip)
+   Input data : 
+   
+   ![]()
+   Output data: 
+   
+   ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip)
 
 ```python
 import face_recognition
