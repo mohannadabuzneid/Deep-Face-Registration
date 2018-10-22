@@ -14,8 +14,7 @@ built with deep learning. The model has an accuracy of 98.55% on the
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/LFW.png)
 
-
-    Figure 1 Sample images of LFW dataset.
+   Figure 1 Sample images of LFW dataset.
 
 #### Find faces in pictures
 
