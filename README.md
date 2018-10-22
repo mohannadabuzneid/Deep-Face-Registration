@@ -27,7 +27,7 @@ In this research, we built the system using [Tensorflow](https://www.tensorflow.
 
 First: We selected one of the LFW images as a reference image for all other images in the dataset. The reference image is centered and has a frontal face with the assumption that, no any transformation (rotation, scaling and shifting) applied to the reference image. Figure 2 shows our reference image which we used to find the transformation parameters.
 
-![]()
+![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/Refrenace%20Image.png)
 
    Figure 2. Refrenace Image.
 
