@@ -65,7 +65,7 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
 
 ## B) Deep Face Registration System:
 
-- We used the [Google Colab system] (https://colab.research.google.com) to tain our network. 
+- We used the [Google Colab system](https://colab.research.google.com) to tain our network. 
 - We uploaded our code and the [Input data]() and the [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip) files to the google drive. 
 
 ```python
