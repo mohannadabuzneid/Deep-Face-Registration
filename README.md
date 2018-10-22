@@ -62,7 +62,7 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
        
 ### The Data will be saved in two numpy files. One contains the input images [Input data]() and the second file contains the image name and the 4 output values [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip). 
 
-#### The full code is avavailable [here](Coming Soon)
+#### The full code is avavailable [here]().
 
 
 ## B) Deep Face Registration System:
