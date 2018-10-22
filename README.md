@@ -71,6 +71,7 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
 - We uploaded our code and the [Input data]() and the [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip) files to the google drive. 
 - Full code is Available [Coming Soon](). 
 
+## 1) Train the Network from scratch:
 
 ### Import the necessary packages:
 
@@ -134,4 +135,73 @@ print("Saved model to disk")
 scoresForTheTestImages = model.evaluate(input_test, output_test, verbose=0)
 print("Error rate for the test images = ",scoresForTheTestImages )
 print("Accurcy for the test images:", (100-scoresForTheTestImages))
+```
+
+### Test Example:
+
+```python
+imageNumber = 4000   #select one of the test images.
+image=input_test[imageNumber]
+image=cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+plt.imshow(image)
+plt.show()
+
+values=decoded_test_imgs[imageNumber]
+values = round((values[0]/(3.14/180)),2),round(1/values[1],2),round(values[2],0),round(values[3],0)
+print("Returned Values from the CNN after Rounding: ",values)
+RoScTr_perImage2(image,values[0],values[1],values[2],values[3])
+```
+
+## ) Load the trained model from json file and the weights from HDF5 to test our result:
+
+From prevous section rebet:
+- Import the necessary packages.
+- Mount the Google Drive.
+- Read the input and the output data then split them into training and testing datastes.
+
+#### Then
+
+### Load the model to json file and the the weights to HDF5 files:
+
+```python
+from keras.models import model_from_json
+#load json and create model
+json_file = open('/content/gdrive/My Drive/ResNet50with224.json', 'r')
+loaded_model_json = json_file.read()
+json_file.close()
+loaded_model = model_from_json(loaded_model_json)
+# load weights into new model
+loaded_model.load_weights("/content/gdrive/My Drive/ResNet50with224.h5")
+print("Loaded model from disk")
+# evaluate loaded model on test data
+loaded_model.compile(optimizer='adam', loss='mean_absolute_error')
+```
+### Predict the output of the test dataset:
+
+```python
+start_time=time.time()
+decoded_test_imgs = model.predict(input_test)
+print("Time used : %.2fs" % (time.time()-start_time))
+```
+### Compute the accuracy for the test dataset:
+
+```python
+scoresForTheTestImages = model.evaluate(input_test, output_test, verbose=0)
+print("Error rate for the test images = ",scoresForTheTestImages )
+print("Accurcy for the test images:", (100-scoresForTheTestImages))
+```
+
+### Test Example:
+
+```python
+imageNumber = 4000   #select one of the test images.
+image=input_test[imageNumber]
+image=cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+plt.imshow(image)
+plt.show()
+
+values=decoded_test_imgs[imageNumber]
+values = round((values[0]/(3.14/180)),2),round(1/values[1],2),round(values[2],0),round(values[3],0)
+print("Returned Values from the CNN after Rounding: ",values)
+RoScTr_perImage2(image,values[0],values[1],values[2],values[3])
 ```
