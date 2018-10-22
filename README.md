@@ -11,7 +11,7 @@ In this research, we built the system using [Tensorflow](https://www.tensorflow.
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/LFW.png)
    
-   Figure 1 Sample images of LFW dataset.
+   ####### Figure 1 Sample images of LFW dataset.
    
 -All images resized to 224x224.
 
@@ -30,7 +30,7 @@ We selected one of the LFW images as a reference image for all other images in t
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/Refrenace%20Image.png)
 
-   Figure 2. Refrenace Image.
+   ####### Figure 2. Refrenace Image.
    
  ###### next: 
 
@@ -38,7 +38,7 @@ We applied the haar-cascade face detection algorithm on the reference image to f
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/The%206%20facial%20landmarks%20associated%20with%20the%20eye.jpg)
 
-Figure 3. The 6 facial landmarks associated with the eye.
+####### Figure 3. The 6 facial landmarks associated with the eye.
 
 ###### next: 
 
@@ -152,16 +152,16 @@ print("Returned Values from the CNN after Rounding: ",values)
 RoScTr_perImage2(image,values[0],values[1],values[2],values[3])
 ```
 
-## ) Load the trained model from json file and the weights from HDF5 to test our result:
+## Load the trained model from json file and the weights from HDF5 to test our result:
 
-From prevous section rebet:
+From previous section repeat:
 - Import the necessary packages.
 - Mount the Google Drive.
 - Read the input and the output data then split them into training and testing datastes.
 
 #### Then
 
-### Load the model to json file and the the weights to HDF5 files:
+### Load the model from json file and the the weights to HDF5 files:
 
 ```python
 from keras.models import model_from_json
