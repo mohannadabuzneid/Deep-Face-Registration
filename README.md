@@ -103,9 +103,32 @@ K.set_image_data_format('channels_last')
 K.set_learning_phase(1)
 import tensorflow as tf
 ```
+### import the necessary functions:
+
+```python
+def RoScTr_perImage2(Image,angle,scale,tx,ty):
+    
+    print("Orginal Image:")
+    TargetImage = cv2.cvtColor(Image, cv2.COLOR_BGR2RGB)
+    rows,cols = TargetImage.shape[:2]
+    
+    #Applaying the rotation and the scaling
+    M = cv2.getRotationMatrix2D((cols/2,rows/2),angle,1)
+    dst = cv2.warpAffine(TargetImage,M,(cols,rows)) 
+    M2 = cv2.getRotationMatrix2D((cols/2,rows/2),0,scale)
+    dst2 = cv2.warpAffine(dst,M2,(cols,rows))
+      
+    #Applaying the Translation  
+    M3 = np.float32([[1,0,tx],[0,1,ty]])
+    dst3 = cv2.warpAffine(dst2,M3,(cols,rows))
+    plt.imshow(dst3)
+    plt.show()
+  
+    return 
+```
 
 ### Mount the Google Drive:
-```
+```python
 from google.colab import drive
 drive.mount('/content/gdrive')
 ```
