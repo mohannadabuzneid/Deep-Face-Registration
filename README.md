@@ -7,7 +7,9 @@ built with deep learning. The model has an accuracy of 98.55% on the
 [Labeled Faces in the Wild](http://vis-www.cs.umass.edu/lfw/) benchmark.
 
 
-## Features
+## Obtaing the Dataset based on the LFW
+
+
 
 #### Find faces in pictures
 
