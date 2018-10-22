@@ -11,14 +11,14 @@ built with deep learning. The model has an accuracy of 98.55% on the
 
 LFW data set contains more than 13,000 images of faces collected from the web. Each face has been labeled with the name of the person pictured. 1680 of the people pictured have two or more distinct photos in the data set. The only constraint on these faces is that they were detected by the Viola-Jones face detector. The images are in color scale, and the size is 250x250 pixels with variant expressions, timing, pose, and gender.. Figure 1 shows a sample of the LFW dataset.
 
-![](https://cloud.githubusercontent.com/assets/896692/23625282/7f2d79dc-025d-11e7-8728-d8924596f8fa.png)
+![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/LFW.png)
 
 
 #### Find faces in pictures
 
 Find all the faces that appear in a picture:
 
-![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/LFW.png)
+![]()
 
 ```python
 import face_recognition
