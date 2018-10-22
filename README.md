@@ -62,14 +62,14 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
        
 ### The Data will be saved in two numpy files. One contains the input images [Input data]() and the second file contains the image name and the 4 output values [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip). 
 
-#### The full code is avavailable [Coming Soon]().
+#### The full code is available  [Coming Soon]().
 
 
 ## B) Deep Face Registration System:
 
 - We used the [Google Colab system](https://colab.research.google.com) to tain our network. 
 - We uploaded our code and the [Input data]() and the [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip) files to the google drive. 
-- Full code is avavailable [Coming Soon]. 
+- Full code is Available [Coming Soon](). 
 
 
 ### Import the necessary packages:
