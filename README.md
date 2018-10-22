@@ -15,9 +15,9 @@ built with deep learning. The model has an accuracy of 98.55% on the
    
    Figure 1 Sample images of LFW dataset.
    
-*All the images resized to 224x224.
-*We detected the faces in the image then we eliminated any image has more than one face.
-*We detected the eyes and we eliminated any image has only one eye detected.
+All the images resized to 224x224.
+We detected the faces in the image then we eliminated any image has more than one face.
+We detected the eyes and we eliminated any image has only one eye detected.
 
 #### Find faces in pictures
 
