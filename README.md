@@ -383,7 +383,7 @@ def ResNet50(include_top=True,
         x = layers.Dropout(0.2)(x)
         x = layers.Dense(128, activation='relu', name='fc1')(x)
         x = layers.Dense(64, activation='relu', name='fc2')(x)
-        x = layers.Dense(classes, name='fc3')(x)#MAC x = layers.Dense(classes, activation='softmax', name='fc1000')(x)
+        x = layers.Dense(classes, name='fc3')(x)
     else:
         if pooling == 'avg':
             x = layers.GlobalAveragePooling2D()(x)
@@ -431,4 +431,16 @@ def ResNet50(include_top=True,
     f.close()
     return model
 print("Done")
+```
+
+### Configure the Deep network and strat training:
+
+```python
+import keras
+import time
+model = ResNet50(input_shape = (224, 224, 3), classes = 4)
+start_time=time.time()
+model.compile(optimizer='adam', loss='mean_absolute_error')
+model.fit(input_train, output_train,epochs=50,batch_size=32,shuffle=True,validation_data=(input_test, output_test))
+print("Time used : %.2fs" % (time.time()-start_time))
 ```
