@@ -49,8 +49,11 @@ To find the transformation parameters for an image, we passed the 12 points of t
 
 Matrix equation (1) is used to minimize the cost of the image registration (without shear) when the related points in two images X and Y are identified. Summation indicates the sum over all points in an image.  We used in our implementation the sigmoidal function as the neuron activation functions.
 
-![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/eq1.png) Eq1
+![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/eq1.png)   Eq1
 
+To find the optimal transformation that will align image 2 to image 1, take the partial derivatives of the above cost with respect to a, b, t1 and t2 and set these to 0 (∂C/∂a = 0, ∂C/∂b = 0, ∂C/∂t1 = 0, ∂C/∂t2 = 0). We express the four resulting equations in matrix form as is shown in equation (2).
+
+![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/eq2.png)   Eq2
 
 ```python
 import face_recognition
