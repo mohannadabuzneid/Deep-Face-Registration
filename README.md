@@ -133,6 +133,31 @@ from google.colab import drive
 drive.mount('/content/gdrive')
 ```
 
+### Read the input and the output data then split them to training and testing datastes:
+```python
+seed=7
+test_size = 0.33
+
+inputData= np.load('/content/gdrive/My Drive/ImagesPointsonly224x224.npy')
+outputDataWithName= np.load('/content/gdrive/My Drive/outputValues224withTheImageName.npy')
+print("inputData  Shape:",inputData.shape)
+print("outputDataWithName   Shape:",outputDataWithName.shape)
+
+outputData=outputDataWithName[0:,1:]
+input_train, input_test = train_test_split(inputData, test_size=test_size,random_state=seed)
+output_train, output_test = train_test_split(outputData, test_size=test_size,random_state=seed)
+
+print("*************************************")
+input_train = input_train.astype('float32')/255
+input_test = input_test.astype('float32') /255
+output_train = output_train.astype('float32')
+output_test = output_test.astype('float32')
+print("input_train  Shape:",input_train.shape)
+print("input_test   Shape:",input_test.shape)
+print("output_train Shape:",output_train.shape)
+print("output_test  Shape:",output_test.shape)
+```
+
 #### Find and manipulate facial features in pictures
 
 Get the locations and outlines of each person's eyes, nose, mouth and chin.
