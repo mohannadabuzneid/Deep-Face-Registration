@@ -98,8 +98,39 @@ Coming Soon
 Coming Soon
 ```
 
-### Configure the Deep Network and strat training:
+### Configure the Deep Network and start training:
 
 ```python
-Coming Soon
+model = ResNet50(input_shape = (224, 224, 3), classes = 4)
+start_time=time.time()
+model.compile(optimizer='adam', loss='mean_absolute_error')
+model.fit(input_train, output_train,epochs=50,batch_size=32,shuffle=True,validation_data=(input_test, output_test))
+print("Time used : %.2fs" % (time.time()-start_time))
+```
+
+### Predict the output of the test dataset:
+
+```python
+start_time=time.time()
+decoded_test_imgs = model.predict(input_test)
+print("Time used : %.2fs" % (time.time()-start_time))
+```
+
+### Serialize the model to json file and the the weights to HDF5 files:
+
+```python
+from keras.models import model_from_json
+model_json = model.to_json()
+with open("/content/gdrive/My Drive/ResNet50with224.json", "w") as json_file:
+    json_file.write(model_json)
+# serialize weights to HDF5
+model.save_weights("/content/gdrive/My Drive/ResNet50with224.h5")
+print("Saved model to disk")
+```
+### Compute the accuracy for the test dataset:
+
+```python
+scoresForTheTestImages = model.evaluate(input_test, output_test, verbose=0)
+print("Error rate for the test images = ",scoresForTheTestImages )
+print("Accurcy for the test images:", (100-scoresForTheTestImages))
 ```
