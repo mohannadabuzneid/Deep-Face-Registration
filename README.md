@@ -225,4 +225,19 @@ The last model, we used the ResNet50 model. We added a drop out layer before the
 ###### Figure 6. Proposed method using ResNet50.
 
 
-# Result
+# Deep Face Registration Result 
+
+In this experiment, we applied our proposed method on the LFW dataset. All the images resized to 224x224 and no preprocessing methods applied to them. All images normalized between [0, 1]. The dataset randomly split to 67% as a training dataset and 33% as a testing dataset. We evaluated 4 of the deep network models and we achieved a high accuracy. In the simple CNN model, we achieved %98.18 accuracy. However, when we use a deeper model we achieved a higher accuracy. The accuracy using the ResNet50 is 98.55% and 98.42% for VGG19 and VGG16 provided the highest accuracy which is 98.40%. Deeper networks takes more training time which is not critical since the network will be trained off line. The networks predicts the output in a real time miner which is with 0.009 second. Table 1 shows the accuracy, training time and the prediction time of the output.  Figure 7 shows all the models converged smoothly. 
+
+###### Table 1  Deep face registration result.
+
+| Model name      | Accuracy | Training time | Prediction time |
+|-----------------|--------------|------------------|-------------|
+| Simple CNN | 98.18        | 2.6 Hours   | 0.004 |
+| VGG16 | 98.40        | 6.6 Hours   | 0.009 |
+| VGG19 | 98.42        | 7.6 Hours   | 0.01 |
+| ResNet50 | 98.55        | 5.5 Hours   |0.007|
+
+![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/Loss.JPG)
+###### Figure 7. Models loss curve.
+
