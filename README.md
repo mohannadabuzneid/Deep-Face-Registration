@@ -241,3 +241,6 @@ In this experiment, we applied our proposed method on the LFW dataset. All the i
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/Loss.JPG)
 ###### Figure 7. Models loss curve.
 
+![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/result%20sample.png)
+###### Figure 8. Example for registered faces: (a) Original face (b) Predicted registered face (c) Expected registered face.
+
