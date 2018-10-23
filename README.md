@@ -209,17 +209,17 @@ RoScTr_perImage2(image,values[0],values[1],values[2],values[3])
 
 # C) Proposed Method Configurations:
 
-Our implementation for deep face registration evaluated few models architectures. We started with a simple CNN network with few convolution layers followed by MaxPooling layer and batch normalization (BN) right after each convolution and before activation, and we did not use dropout. In the classification layers, we used two fully-connected layers one with 128 neurons and one with 64 neurons followed with the output layers with four neurons. We randomly initialize the weights, and we use the Relu activation function. We used Adam optimizer with a mini-batch size of 32. We used the default learning rate which is 0.001, and the model was trained up to 80 epochs. Figure 4 shows the model architecture.
+Our implementation for deep face registration evaluated few models architectures. We started with a simple CNN network with few convolution layers followed by MaxPooling layer and batch normalization (BN) right after each convolution and before activation, and we did not use dropout. In the classification layers, we used two fully-connected layers one with 128 neurons and one with 64 neurons followed with the output layers with four neurons. We randomly initialize the weights, and we use the Relu activation function. We used Adam optimizer with a mini-batch size of 32. We used the default learning rate which is 0.001, and the model was trained up to 80 epochs. Figure 4 shows the model architecture.Full code is Available [Simple CNN Coming Soon]().
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/Mynet.png)
 ###### Figure 4. Proposed method using a simple CNN.
 
-In the second model, we went deeper and used the VGGNet. Ones with 16 layers (VGG16) and the second one with 19 layers (VGG19) as Figure 5 shows. We added two fully-connected layers one with 128 neurons and one with 64 neurons followed with the output layers with four neurons at the end to fit our problem. We used Adam optimizer with a mini-batch size of 32. However, we changed to the learning rate to 0.0001, and the model was trained up to 80 epochs. 
+In the second model, we went deeper and used the VGGNet. Ones with 16 layers (VGG16) and the second one with 19 layers (VGG19) as Figure 5 shows. We added two fully-connected layers one with 128 neurons and one with 64 neurons followed with the output layers with four neurons at the end to fit our problem. We used Adam optimizer with a mini-batch size of 32. However, we changed to the learning rate to 0.0001, and the model was trained up to 80 epochs. Full code is Available [VGG16 Coming Soon]() and Full code is Available [VGG19 Coming Soon](). 
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/VGG16_192.png)
 ###### Figure 5. Proposed method using VGG16 and VGG19.
 
-The last model, we used the ResNet50 model. We added a drop out layer before the fully-connected layers to make the model generalized. We used the same fully-connected and the output layers as the VGGNet model. We used Adam optimizer with a mini-batch size of 32. We used the default learning rate which is 0.001, and the model was trained up to 80 epochs. Figure 6 shows the ResNet50 model.
+The last model, we used the ResNet50 model. We added a drop out layer before the fully-connected layers to make the model generalized. We used the same fully-connected and the output layers as the VGGNet model. We used Adam optimizer with a mini-batch size of 32. We used the default learning rate which is 0.001, and the model was trained up to 80 epochs. Figure 6 shows the ResNet50 model.Full code is Available [ResNet50 Coming Soon]()
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/MyResNet50.png)
 ###### Figure 6. Proposed method using ResNet50.
