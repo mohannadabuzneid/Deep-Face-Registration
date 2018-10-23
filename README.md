@@ -61,7 +61,7 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
        Matrix Ainv = A.Inverse and  Matrix Res = Ainv * B.
        
        
-### The Data will be saved in two numpy files. One contains the input images [Input data](https://drive.google.com/file/d/1l5HvUC7D9ZOICiyf4ufodSeP1mw4_Go4/view?usp=sharing) and the second file contains the image name and the 4 output values [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip). 
+### The Data will be saved in two numpy files. One contains the input images [Input data](https://drive.google.com/file/d/1l5HvUC7D9ZOICiyf4ufodSeP1mw4_Go4/view?usp=sharing) and the second file contains the image name and the 4 output values [Output data](https://drive.google.com/file/d/12e1x-L8vLz32o92cDx57lRY25pXyx42l/view?usp=sharing). 
 
 #### The full code is available  [Coming Soon]().
 
@@ -69,7 +69,7 @@ After calculating the sum over all points for the 4x4 matrix and the right-hand 
 ## B) Deep Face Registration System:
 
 - We used the [Google Colab system](https://colab.research.google.com) to tain our network. 
-- We uploaded our code and the [Input data](https://drive.google.com/file/d/1l5HvUC7D9ZOICiyf4ufodSeP1mw4_Go4/view?usp=sharing) and the [Output data](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/outputValues224withTheImageName.zip) files to the google drive. 
+- We uploaded our code and the [Input data](https://drive.google.com/file/d/1l5HvUC7D9ZOICiyf4ufodSeP1mw4_Go4/view?usp=sharing) and the [Output data](https://drive.google.com/file/d/12e1x-L8vLz32o92cDx57lRY25pXyx42l/view?usp=sharing) files to the google drive. 
 - Full code is Available [Coming Soon](). 
 
 ## 1) Train the Network from scratch:
