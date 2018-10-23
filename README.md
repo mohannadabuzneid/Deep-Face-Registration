@@ -24,7 +24,7 @@ In this research, we built the system using [Tensorflow](https://www.tensorflow.
 
 -The new dataset will contain the images as an input and the Rotation, scaling and X_shifting and y_shifting as output.
 
-#### setps:
+#### steps:
 
 ###### First: 
 We selected one of the LFW images as a reference image for all other images in the dataset. The reference image is centered and has a frontal face with the assumption that, no any transformation (rotation, scaling and shifting) applied to the reference image. Figure 2 shows our reference image which we used to find the transformation parameters.
@@ -206,3 +206,19 @@ values = round((values[0]/(3.14/180)),2),round(1/values[1],2),round(values[2],0)
 print("Returned Values from the CNN after Rounding: ",values)
 RoScTr_perImage2(image,values[0],values[1],values[2],values[3])
 ```
+
+# C) Proposed Method Configurations:
+
+Our implementation for deep face registration evaluated few models architectures. We started with a simple CNN network with few convolution layers followed by MaxPooling layer and batch normalization (BN) right after each convolution and before activation, and we do not use dropout. In the classification layers, we used two fully-connected layers one with 128 neurons and one with 64 neurons followed with the output layers with four neurons. We randomly initialize the weights, and we use the Relu activation function. We used Adam optimizer with a mini-batch size of 32. We used the default learning rate which is 0.001, and the model was trained up to 80 epochs. Figure 4 shows the model architecture.
+
+
+In the second model, we went deeper and used the VGGNet. Ones with 16 layers (VGG16) and the second one with 19 layers (VGG19) as Figure 5 shows. We added two fully-connected layers one with 128 neurons and one with 64 neurons followed with the output layers with four neurons at the end to fit our problem. We used Adam optimizer with a mini-batch size of 32. However, we changed to the learning rate to 0.0001, and the model was trained up to 80 epochs. 
+
+
+
+The last model, we used the ResNet50 model. We added a drop out layer before the fully-connected layers to make the model generalized. We used the same fully-connected and the output layers as the VGGNet model. We used Adam optimizer with a mini-batch size of 32. We used the default learning rate which is 0.001, and the model was trained up to 80 epochs. Figure 3.26 shows the ResNet50 model.
+
+
+
+
+# Result
