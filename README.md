@@ -233,10 +233,10 @@ In this experiment, we applied our proposed method on the LFW dataset. All the i
 
 | Model name      | Accuracy | Training time | Prediction time |
 |-----------------|--------------|------------------|-------------|
-| Simple CNN | 98.18        | 2.6 Hours   | 0.004 |
-| VGG16 | 98.40        | 6.6 Hours   | 0.009 |
-| VGG19 | 98.42        | 7.6 Hours   | 0.01 |
-| ResNet50 | 98.55        | 5.5 Hours   |0.007|
+| Simple CNN | 98.18        | 2.6 Hours   | 0.004 Second  |
+| VGG16 | 98.40        | 6.6 Hours   | 0.009 Second |
+| VGG19 | 98.42        | 7.6 Hours   | 0.01 Second |
+| ResNet50 | 98.55        | 5.5 Hours   |0.007 Second|
 
 ![](https://github.com/mohannadabuzneid/Deep-Face-Registration/blob/master/Loss.JPG)
 ###### Figure 7. Models loss curve.
